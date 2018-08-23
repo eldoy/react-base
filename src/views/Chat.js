@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
 import { observer } from 'mobx-react'
-import { observable, computed } from 'mobx'
 import store from '@/store.js'
 
 @observer class Chat extends Component {
@@ -22,10 +20,6 @@ import store from '@/store.js'
   }
 
   render () {
-    if (!store.isLoggedIn) {
-      return <Redirect to="/login"/>
-    }
-
     return (
       <div class="Chat">
         <p>

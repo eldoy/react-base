@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import { observable, computed } from 'mobx'
-import { Redirect } from 'react-router-dom'
 import store from '@/store.js'
 import './Login.css'
 
@@ -49,10 +48,6 @@ import './Login.css'
   }
 
   render () {
-    if (this.redirect) {
-      return <Redirect to="/chat"/>
-    }
-
     return (
       <div className="Login">
         <h1>Chat now</h1>

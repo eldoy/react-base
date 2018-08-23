@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
-import { Link, Redirect, withRouter } from 'react-router-dom'
 import { observer } from 'mobx-react'
-import { observable, computed } from 'mobx'
+import Link from '@/router/Link'
 import store from '@/store.js'
 import './Navigation.css'
 
-const LogoutButton = withRouter(({ history }) => {
+const LogoutButton = (props) => {
   return (
-    <a href="javascript:void(0)" onClick={ () => {
-      history.push('/')
+    <a href="/logout" onClick={ (event) => {
+      event.preventDefault()
       store.isLoggedIn = false
     } }>Logout</a>
   )
-})
+}
 
 @observer class Navigation extends Component {
   render() {
