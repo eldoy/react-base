@@ -7,13 +7,9 @@ class Navigator {
   push (path) {
     this.current = path
     window.history.pushState({}, '', path)
-    const links = document.querySelectorAll('.router-link')
-    links.forEach((link) => {
-      if (link.pathname === path) {
-        link.classList.add('active')
-      } else {
-        link.classList.remove('active')
-      }
+    this.links = this.links || document.body.querySelectorAll('.router-link')
+    this.links.forEach((link) => {
+      link.classList[ link.pathname === path ? 'add' : 'remove' ]('active')
     })
   }
 }

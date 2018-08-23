@@ -1,8 +1,8 @@
 import { observable } from 'mobx'
 
 class Store {
-  @observable username = 'vidar'
-  @observable isLoggedIn = true
+  @observable username = ''
+  @observable isLoggedIn = false
   @observable messages = []
 }
 
