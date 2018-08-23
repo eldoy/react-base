@@ -9,3 +9,13 @@ nav.Navigation a {
 nav.Navigation a.active {
   color: black;
 }
+
+div.Navigation-login-status {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(#efefff, #fafaff);
+  height: 40px;
+  padding: 0.5rem 0;
+  font-size: 90%;
+}

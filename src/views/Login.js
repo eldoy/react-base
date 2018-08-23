@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import { observable, computed } from 'mobx'
 import store from '@/store.js'
+import navigator from '@/router/navigator.js'
 import './Login.css'
 
 @observer class Login extends Component {
 
   @observable count = 0
   @observable reverse = ''
-  @observable redirect = false
 
   constructor (props) {
     super(props)
@@ -23,10 +23,6 @@ import './Login.css'
     return store.username.length < 1
   }
 
-  componentDidMount () {
-    store.username = ''
-  }
-
   handleChange = (event) => {
     const val = event.target.value
     store.username = val
@@ -39,12 +35,13 @@ import './Login.css'
   }
 
   handleLogin = (event) => {
-    console.log('Logging in with', store.username)
+    const input = this.input.current
     if (store.username.length < 1) {
-      return this.input.current.focus()
+      return input.focus()
     }
+    input.value = ''
     store.isLoggedIn = true
-    this.redirect = true
+    navigator.push('/chat')
   }
 
   render () {

@@ -1,15 +1,26 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import Link from '@/router/Link'
+import navigator from '@/router/navigator.js'
 import store from '@/store.js'
 import './Navigation.css'
 
 const LogoutButton = (props) => {
   return (
-    <a href="/logout" onClick={ (event) => {
-      event.preventDefault()
-      store.isLoggedIn = false
-    } }>Logout</a>
+    <React.Fragment>
+      <Link to="/chat">Chat</Link>
+      <div className="Navigation-login-status">
+        { store.isLoggedIn ? `( ${store.username} )` : '' }
+        <a
+          href="/logout"
+          className="Navigation-logout"
+          onClick={ (event) => {
+            event.preventDefault()
+            navigator.push('/login')
+            store.isLoggedIn = false
+          } }>Logout</a>
+      </div>
+    </React.Fragment>
   )
 }
 
@@ -27,7 +38,6 @@ const LogoutButton = (props) => {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         { button }
-        { store.isLoggedIn ? `( ${store.username} )` : '' }
       </nav>
     )
   }

@@ -5,13 +5,16 @@ class Link extends Component {
   handleClick = (event) => {
     event.preventDefault()
     const to = this.props.to
-    navigator.current = to
-    window.history.pushState({}, '', to)
+    navigator.push(to)
   }
 
   render () {
+    const classNames = ['router-link']
+    if (window.location.pathname === this.props.to) {
+      classNames.push('active')
+    }
     return (
-      <a href={ this.props.to } onClick={ this.handleClick }>{ this.props.children }</a>
+      <a className={ classNames.join(' ') } href={ this.props.to } onClick={ this.handleClick }>{ this.props.children }</a>
     )
   }
 }
