@@ -1,0 +1,37 @@
+html, * {
+  font-family: monaco, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:active, a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"] {
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+button.button-disabled {
+  color: #aaa;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}

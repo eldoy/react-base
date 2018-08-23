@@ -1,0 +1,11 @@
+nav.Navigation {
+  padding-top: 1rem;
+}
+
+nav.Navigation a {
+  margin: 0 1rem;
+}
+
+nav.Navigation a.active {
+  color: black;
+}
