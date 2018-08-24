@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import { Link, navigator } from '@/router'
+import { Link, router } from '@/router-link'
 import store from '@/store.js'
 import './Navigation.css'
 
@@ -15,7 +15,7 @@ const LogoutButton = (props) => {
           className="Navigation-logout"
           onClick={ (event) => {
             event.preventDefault()
-            navigator.push('/login')
+            router.push('/login')
             store.isLoggedIn = false
           } }>Logout</a>
       </div>

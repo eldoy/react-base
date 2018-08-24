@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { store, observer } from '@/store.js'
-import { navigator } from '@/router'
+import { router } from '@/router-link'
 
 @observer class Chat extends Component {
   constructor (props) {
     super(props)
     if (!store.isLoggedIn) {
-      navigator.push('/login')
+      router.push('/login')
     }
     this.input = React.createRef()
   }

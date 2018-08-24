@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Router extends Component {
+export class RouterLink extends Component {
   state = { current: window.location.pathname }
 
   constructor (props) {
@@ -61,4 +61,4 @@ export class Router extends Component {
   }
 }
 
-export default Router
+export default RouterLink

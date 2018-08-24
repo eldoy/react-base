@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { store, observer, observable, computed } from '@/store.js'
-import navigator from '@/router/navigator.js'
+import { router } from '@/router-link'
 import './Login.css'
 
 @observer class Login extends Component {
@@ -39,7 +39,7 @@ import './Login.css'
     }
     input.value = ''
     store.isLoggedIn = true
-    navigator.push('/chat')
+    router.push('/chat')
   }
 
   render () {

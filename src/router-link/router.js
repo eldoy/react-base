@@ -1,5 +1,4 @@
-export class Navigator {
-
+export class Router {
   // Change the location state and dispatch event
   push = (to) => {
     window.history.pushState({}, '', to)
@@ -14,5 +13,5 @@ export class Navigator {
   }
 }
 
-export const navigator = new Navigator()
-export default navigator
+export const router = new Router()
+export default router

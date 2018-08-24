@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import navigator from './navigator.js'
+import router from './router.js'
 
 export class Link extends Component {
   handleClick = (event) => {
     event.preventDefault()
-    navigator.push(this.props.to)
+    router.push(this.props.to)
   }
 
   render () {

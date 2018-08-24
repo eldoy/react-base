@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from '@/router'
+import { Link } from '@/router-link'
 import { store } from '@/store.js'
 
 const LoginLink = (props) => {
