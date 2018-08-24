@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { store, observer } from '@/store.js'
-import { router } from '@/router-link'
+import { router } from 'router-link'
 
 @observer class Chat extends Component {
   constructor (props) {

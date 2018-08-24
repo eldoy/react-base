@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
-import { Link, router } from '@/router-link'
+import { Link, router } from 'router-link'
 import store from '@/store.js'
 import './Navigation.css'
 

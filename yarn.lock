@@ -6063,6 +6063,12 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+router-link@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/router-link/-/router-link-0.0.4.tgz#5644b91023de5b0828c0e2691301ad1ec6010550"
+  dependencies:
+    react "^16.4.2"
+
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.3.0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"

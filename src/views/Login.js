@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { store, observer, observable, computed } from '@/store.js'
-import { router } from '@/router-link'
+import { router } from 'router-link'
 import './Login.css'
 
 @observer class Login extends Component {
