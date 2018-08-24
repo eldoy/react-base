@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import { Router } from '@/router'
 import Navigation from '@/components/Navigation.js'
-import Router from '@/router/Router.js'
 import routes from './routes.js'
 import './App.css'
 

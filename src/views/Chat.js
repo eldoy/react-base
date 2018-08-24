@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react'
-import store from '@/store.js'
-import navigator from '@/router/navigator.js'
+import { store, observer } from '@/store.js'
+import { navigator } from '@/router'
 
 @observer class Chat extends Component {
-
   constructor (props) {
     super(props)
     if (!store.isLoggedIn) {

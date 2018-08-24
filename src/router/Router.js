@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class Router extends Component {
+export class Router extends Component {
   state = { current: window.location.pathname }
 
   constructor (props) {
@@ -28,6 +28,7 @@ class Router extends Component {
     }
   }
 
+  // Dispatch is called when the location state changes
   dispatch = (event) => {
     event.preventDefault()
     this.setState({ current: window.location.pathname })

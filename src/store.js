@@ -6,4 +6,8 @@ class Store {
   @observable messages = []
 }
 
-export default new Store()
+// Exports
+export const store = new Store()
+export default store
+export { observable, computed, action } from 'mobx'
+export { observer } from 'mobx-react'

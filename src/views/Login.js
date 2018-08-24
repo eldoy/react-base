@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react'
-import { observable, computed } from 'mobx'
-import store from '@/store.js'
+import { store, observer, observable, computed } from '@/store.js'
 import navigator from '@/router/navigator.js'
 import './Login.css'
 
@@ -47,7 +45,7 @@ import './Login.css'
   render () {
     return (
       <div className="Login">
-        <h1>Chat now</h1>
+        <h1>Log in to chat</h1>
         <p>Fill out your username and click on Start!</p>
         <p>
           <input type="text" placeholder="Username" onChange={ this.handleChange } ref={ this.input }/>

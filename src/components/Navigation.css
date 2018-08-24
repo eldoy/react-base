@@ -11,11 +11,9 @@ nav.Navigation a.active {
 }
 
 div.Navigation-login-status {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  bottom: 0;
-  background-image: linear-gradient(#efefff, #fafaff);
-  height: 40px;
+  top: 0;
   padding: 0.5rem 0;
-  font-size: 90%;
+  font-size: 85%;
 }

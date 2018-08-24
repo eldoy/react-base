@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import navigator from './navigator.js'
 
-class Link extends Component {
+export class Link extends Component {
   handleClick = (event) => {
     event.preventDefault()
     navigator.push(this.props.to)
