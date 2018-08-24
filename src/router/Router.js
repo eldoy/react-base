@@ -1,21 +1,16 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react'
-import { computed } from 'mobx'
-import navigator from './navigator.js'
 
-@observer class Router extends Component {
+class Router extends Component {
+  state = { current: window.location.pathname }
+
   constructor (props) {
     super(props)
     this.routes = props.routes
 
     // Transform routes
     this.transformRoutes()
-    window.onpopstate = this.dispatch
-  }
-
-  // Track the route store current
-  @computed get current () {
-    return navigator.current
+    window.addEventListener('popstate', this.dispatch)
+    window.addEventListener('pushstate', this.dispatch)
   }
 
   // Transform routes to regexp matchers
@@ -35,7 +30,7 @@ import navigator from './navigator.js'
 
   dispatch = (event) => {
     event.preventDefault()
-    navigator.current = window.location.pathname
+    this.setState({ current: window.location.pathname })
   }
 
   // Match a route and return a view
@@ -59,13 +54,9 @@ import navigator from './navigator.js'
     return []
   }
 
-  route = () => {
-    const [ View, props ] = this.match(this.current)
-    return <View route={ props }/>
-  }
-
   render () {
-    return <React.Fragment>{ this.route() }</React.Fragment>
+    const [ View, props ] = this.match(this.state.current)
+    return <React.Fragment><View route={ props }/></React.Fragment>
   }
 }
 

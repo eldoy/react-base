@@ -4,8 +4,7 @@ import navigator from './navigator.js'
 class Link extends Component {
   handleClick = (event) => {
     event.preventDefault()
-    const to = this.props.to
-    navigator.push(to)
+    navigator.push(this.props.to)
   }
 
   render () {
